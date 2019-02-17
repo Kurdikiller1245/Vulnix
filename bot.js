@@ -66,7 +66,7 @@ if (message.content.toLowerCase().startsWith(prefix + `new`)) {
               description: "",
               fields: [{
                   name: "Ticket",
-                  value: ':white_check_mark: Your ticket has been created, #${c.name}.',
+                  value: ':white_check_mark: Your ticket has been created,' #${c.name}.,
                 },
              ],
          }})
