@@ -68,6 +68,7 @@ if (message.content.toLowerCase().startsWith(prefix + `new`)) {
                   name: "Ticket",
                   value: ":white_check_mark: Your ticket has been created, #${c.name}.",
                 },
+             ],
         
         const embed = new Discord.RichEmbed()
         .setColor(0xCF40FA)
