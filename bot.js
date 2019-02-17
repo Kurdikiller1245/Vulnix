@@ -12,7 +12,7 @@ var prefix = "-";
 
 client.on("ready", () => {
   console.log("RelaXCraft | Logged in! Server count: ${client.guilds.size}");
-  client.user.setGame(`vhelp / vnew | ${client.guilds.size} servers`);
+  client.user.setGame(`-help / -new | ${client.guilds.size} servers`);
 });
 
 client.on("guildCreate", (guild) => {
@@ -57,7 +57,18 @@ if (message.content.toLowerCase().startsWith(prefix + `new`)) {
             SEND_MESSAGES: true,
             READ_MESSAGES: true
         });
-        message.channel.send(`:white_check_mark: Your ticket has been created, #${c.name}.`);
+         message.channel.send({embed:{
+            color: 0x28d62b,
+            author: {
+                name: message.author.tag,
+                icon_url: message.author.avatarURL
+              },
+              description: "",
+              fields: [{
+                  name: "Ticket",
+                  value: ":white_check_mark: Your ticket has been created, #${c.name}.",
+                },
+        
         const embed = new Discord.RichEmbed()
         .setColor(0xCF40FA)
         .addField(`Hey ${message.author.username}!`, `Please try explain why you opened this ticket with as much detail as possible. Our **Support Team** will be here soon to help.`)
