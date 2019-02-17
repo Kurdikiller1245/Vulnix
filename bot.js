@@ -12,11 +12,11 @@ var prefix = "-";
 
 client.on("ready", () => {
   console.log("RelaXCraft | Logged in! Server count: ${client.guilds.size}");
-  client.user.setGame(`-help / -new | ${client.guilds.size} servers`);
+  client.user.setPresence({ game: { name: 'Use -help', type: 0 } });
 });
 
 client.on("guildCreate", (guild) => {
-client.user.setGame(`-help / -new | ${client.guilds.size} servers`);
+client.user.setPresence({ game: { name: 'Use -help', type: 0 } });
 });
 
 client.on("message", (message) => {
@@ -66,7 +66,7 @@ if (message.content.toLowerCase().startsWith(prefix + `new`)) {
               description: "",
               fields: [{
                   name: "Ticket",
-                  value: ':white_check_mark: Your ticket has been created, #${c.name}.',
+                  value: ':white_check_mark: Your ticket has been created, ´´#${c.name}.´´',
                 },
              ],
          }})
